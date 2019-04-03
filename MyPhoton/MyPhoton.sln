@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhoton", "MyPhoton\MyPhoton.csproj", "{8DCFC808-B268-4FB1-A60E-9D1A36305A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionBaseData", "ConnectionBaseData\ConnectionBaseData.csproj", "{3CF877B0-B47F-4390-83D2-F8637D719A06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateMysql", "NHibernateMysql\NHibernateMysql.csproj", "{B3DF2F61-44F0-421A-A35C-0E0019991B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{3BB10301-18B2-46DE-9D8E-B19A6A34EE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DCFC808-B268-4FB1-A60E-9D1A36305A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCFC808-B268-4FB1-A60E-9D1A36305A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCFC808-B268-4FB1-A60E-9D1A36305A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCFC808-B268-4FB1-A60E-9D1A36305A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF877B0-B47F-4390-83D2-F8637D719A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF877B0-B47F-4390-83D2-F8637D719A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF877B0-B47F-4390-83D2-F8637D719A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF877B0-B47F-4390-83D2-F8637D719A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DF2F61-44F0-421A-A35C-0E0019991B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DF2F61-44F0-421A-A35C-0E0019991B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DF2F61-44F0-421A-A35C-0E0019991B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DF2F61-44F0-421A-A35C-0E0019991B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB10301-18B2-46DE-9D8E-B19A6A34EE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB10301-18B2-46DE-9D8E-B19A6A34EE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB10301-18B2-46DE-9D8E-B19A6A34EE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB10301-18B2-46DE-9D8E-B19A6A34EE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C8E8A94-DD44-4B57-BF13-96E4C1E78ED5}
+	EndGlobalSection
+EndGlobal

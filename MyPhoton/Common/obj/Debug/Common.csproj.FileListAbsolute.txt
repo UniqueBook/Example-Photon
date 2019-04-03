@@ -1,0 +1,5 @@
+F:\Photon\MyPhoton\Common\bin\Debug\Common.dll
+F:\Photon\MyPhoton\Common\bin\Debug\Common.pdb
+F:\Photon\MyPhoton\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+F:\Photon\MyPhoton\Common\obj\Debug\Common.dll
+F:\Photon\MyPhoton\Common\obj\Debug\Common.pdb

@@ -1,0 +1,9 @@
+F:\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyPhoton\bin\MyPhoton.dll
+F:\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyPhoton\bin\MyPhoton.pdb
+F:\Photon\MyPhoton\MyPhoton\obj\Debug\MyPhoton.csproj.CoreCompileInputs.cache
+F:\Photon\MyPhoton\MyPhoton\obj\Debug\MyPhoton.csproj.CopyComplete
+F:\Photon\MyPhoton\MyPhoton\obj\Debug\MyPhoton.dll
+F:\Photon\MyPhoton\MyPhoton\obj\Debug\MyPhoton.pdb
+F:\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyPhoton\bin\log4net.config
+F:\Photon\MyPhoton\MyPhoton\obj\Debug\MyPhoton.csprojAssemblyReference.cache
+F:\Photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\MyPhoton\bin\hibernate.cfg.xml

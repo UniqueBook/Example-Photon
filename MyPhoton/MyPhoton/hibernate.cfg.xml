@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name="dialect">NHibernate.Dialect.MySQL5Dialect</property><!--定义使用的msql版本-->
+    <property name="connection.driver_class">NHibernate.Driver.MySqlDataDriver</property><!--定义连接的数据库类型-->
+    <property name="connection.connection_string">Server=localhost;Database=myphoton;Port=3306;User ID=root;Password=ushen@lsh</property>
+
+    <property name="show_sql">true</property>
+  </session-factory>
+</hibernate-configuration>

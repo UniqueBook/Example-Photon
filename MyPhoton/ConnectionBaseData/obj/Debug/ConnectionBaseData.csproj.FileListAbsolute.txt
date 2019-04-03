@@ -1,0 +1,11 @@
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\ConnectionBaseData.exe.config
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\ConnectionBaseData.exe
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\ConnectionBaseData.pdb
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\MySql.Data.dll
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\Google.Protobuf.dll
+F:\Photon\MyPhoton\ConnectionBaseData\bin\Debug\MySql.Data.xml
+F:\Photon\MyPhoton\ConnectionBaseData\obj\Debug\ConnectionBaseData.csprojAssemblyReference.cache
+F:\Photon\MyPhoton\ConnectionBaseData\obj\Debug\ConnectionBaseData.csproj.CoreCompileInputs.cache
+F:\Photon\MyPhoton\ConnectionBaseData\obj\Debug\ConnectionBaseData.csproj.CopyComplete
+F:\Photon\MyPhoton\ConnectionBaseData\obj\Debug\ConnectionBaseData.exe
+F:\Photon\MyPhoton\ConnectionBaseData\obj\Debug\ConnectionBaseData.pdb

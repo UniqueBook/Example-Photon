@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MyPhoton"
+                   namespace="MyPhoton.Model"><!--assembly  模型所在的程序集；namespace 模型所在的命名空间-->
+
+  <!--name  所对应类的名称；table 模型所对应的表名-->
+  <class name="User" table="user">
+    <!--主键使用id标签配置   name 对应类中的某个属性；column 对应数据库中的字段名，不区分大小写 ；type 对应字段数据类型-->
+    <!--generator （生成器）表明该字段是自动生成的 ；class=native  表示使用数据库自身自带的生成器-->
+    <id name="Id" column="id" type="Int32">
+      <generator class="native" />
+    </id>
+    <property name="Name" column="name" type="String"/>
+    <property name="Pwd" column="pwd" type="String"/>
+    <property name="Account" column="account" type="String"/>
+  </class>
+
+</hibernate-mapping>
