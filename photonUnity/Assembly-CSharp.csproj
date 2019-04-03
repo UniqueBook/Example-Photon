@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\PhotonEngine.cs" />
     <Compile Include="Assets\Script\PhotonManager.cs" />
     <Compile Include="Assets\Script\Request\LoginRequest.cs" />
+    <Compile Include="Assets\Script\Request\RegisterRequest.cs" />
     <Compile Include="Assets\Script\Request\Request.cs" />
     <Compile Include="Assets\Script\UI\LoginPanel.cs" />
     <Compile Include="Assets\Script\UI\RegisterPanel.cs" />
