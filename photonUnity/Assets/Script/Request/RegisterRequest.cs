@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ExitGames.Client.Photon;
 using UnityEngine;
 using Common;
+using Common.Tools;
 
 public class RegisterRequest : Request
 {
@@ -10,6 +11,14 @@ public class RegisterRequest : Request
     public string username;
     [HideInInspector]
     public string password;
+
+    private RegisterPanel registerPanel;
+
+    public override void Start()
+    {
+        base.Start();
+        registerPanel = GetComponent<RegisterPanel>();
+    }
 
     public override void DefaultRequest()
     {
@@ -19,8 +28,14 @@ public class RegisterRequest : Request
         PhotonEngine.Peer.OpCustom((byte)opCode, data, true);
     }
 
+    /// <summary>
+    /// 服务端响应客户端请求的返回
+    /// </summary>
+    /// <param name="operationResponse"></param>
     public override void OnOperationResponse(OperationResponse operationResponse)
     {
-        throw new System.NotImplementedException();
+        ReturnCode returnCode = (ReturnCode)operationResponse.ReturnCode;
+        Debug.Log(returnCode);
+        registerPanel.OnRegisterResponse(returnCode);
     }
 }

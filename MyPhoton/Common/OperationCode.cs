@@ -12,6 +12,7 @@ namespace Common
     {
         Login,
         Register,
-        Default
+        Default,
+        SyncPosition
     }
 }

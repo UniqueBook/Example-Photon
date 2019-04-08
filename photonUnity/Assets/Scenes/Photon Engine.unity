@@ -744,6 +744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginPanel: {fileID: 1280364963}
+  usernameIF: {fileID: 1190646540}
+  passwordIF: {fileID: 335166840}
+  hintMassage: {fileID: 1779011608}
 --- !u!114 &417218765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opCode: 1
+  username: 
+  password: 
 --- !u!1 &614916730
 GameObject:
   m_ObjectHideFlags: 0

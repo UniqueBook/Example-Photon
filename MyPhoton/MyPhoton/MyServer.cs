@@ -64,6 +64,8 @@ namespace MyPhoton
             handlerDict.Add(loginHandler.OpCode, loginHandler);
             DefaultHandler defaultHandler = new DefaultHandler();
             handlerDict.Add(defaultHandler.OpCode, defaultHandler);
+            RegisterHandler registerHandler = new RegisterHandler();
+            handlerDict.Add(registerHandler.OpCode, registerHandler);
         }
 
         //server 端关闭的时候所做的一些处理

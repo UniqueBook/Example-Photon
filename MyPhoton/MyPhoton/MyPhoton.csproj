@@ -83,6 +83,7 @@
     <Compile Include="Handler\BaseHandler.cs" />
     <Compile Include="Handler\DefaultHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
+    <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Manger\IUserManager.cs" />
     <Compile Include="Manger\UserManager.cs" />
     <Compile Include="Model\User.cs" />

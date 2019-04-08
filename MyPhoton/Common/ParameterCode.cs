@@ -11,6 +11,7 @@ namespace Common
     public enum ParameterCode : byte
     {
         Name,
-        Pwd
+        Pwd,
+        Position
     }
 }
