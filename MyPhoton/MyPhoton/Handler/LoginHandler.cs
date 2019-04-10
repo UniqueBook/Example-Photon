@@ -36,6 +36,7 @@ namespace MyPhoton.Handler
             if (isSuccess)
             {
                 response.ReturnCode = (short)ReturnCode.Success;
+                peer.username = name; //保存用户名到服务器
             }
             else
             {

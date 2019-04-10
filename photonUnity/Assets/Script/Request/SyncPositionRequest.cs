@@ -20,7 +20,9 @@ public class SyncPositionRequest : Request
     public override void DefaultRequest()
     {
         Dictionary<byte, object> data = new Dictionary<byte, object>();
-        data.Add((byte)ParameterCode.Position, new Victor3Data() { x = pos.x, y = pos.y, z = pos.z });
+        data.Add((byte)ParameterCode.X, pos.x);
+        data.Add((byte)ParameterCode.Y, pos.y);
+        data.Add((byte)ParameterCode.Z, pos.z);
         PhotonEngine.Peer.OpCustom((byte)opCode, data, true);
     }
 

@@ -13,6 +13,9 @@ namespace MyPhoton
 {
     public class MyClient : ClientPeer
     {
+        public float x, y, z;
+        public string username;
+
         //调用父类里面的初始化方法，完成初始化工作
         public MyClient(InitRequest initRequest) : base(initRequest)
         {
@@ -38,7 +41,7 @@ namespace MyPhoton
         //处理断开连接的请求
         protected override void OnDisconnect(DisconnectReason reasonCode, string reasonDetail)
         {
-
+            MyServer._instance.clientPeer.Remove(this);
         }
     }
 }

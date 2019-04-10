@@ -12,6 +12,9 @@ namespace Common
     {
         Name,
         Pwd,
-        Position
+        Position,
+        X,Y,Z,
+        UserNameList,
+        PlayerDataList
     }
 }

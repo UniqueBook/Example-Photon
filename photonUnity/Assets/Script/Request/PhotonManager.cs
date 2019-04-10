@@ -48,20 +48,7 @@ public class PhotonManager : MonoBehaviour, IPhotonPeerListener
             Debug.Log("检测到未连接，重新连接");
             peer.Connect(serverAddress, applicationName);    //，如果服务器未连接，那么连接服务器
         }
-
         peer.Service();
-
-        Debug.Log("给服务器发请求");
-        var parameters = new Dictionary<byte, object>();    //字典
-        parameters.Add(0, "武宝宝");
-        peer.OpCustom(1, parameters, true);                //给服务器发请求
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Debug.Log("给服务器发请求");
-        //    var parameters = new Dictionary<byte, object>();    //字典
-        //    parameters.Add(0, "武宝宝");
-        //    peer.OpCustom(1, parameters, true);                //给服务器发请求
-        //}
     }
 
     /// <summary>
@@ -115,5 +102,4 @@ public class PhotonManager : MonoBehaviour, IPhotonPeerListener
                 break;
         }
     }
-
 }

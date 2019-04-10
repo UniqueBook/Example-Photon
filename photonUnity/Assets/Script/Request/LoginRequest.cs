@@ -38,7 +38,11 @@ public class LoginRequest : Request
     public override void OnOperationResponse(OperationResponse operationResponse)
     {
         ReturnCode returnCode = (ReturnCode)operationResponse.ReturnCode;
-        Debug.Log(returnCode);
+        Debug.Log("ReturnCode:" + returnCode);
+        if (returnCode == ReturnCode.Success)
+        {
+            PhotonEngine.username = Name;
+        }
         loginPanel.OnLoginResponse(returnCode);
     }
 }

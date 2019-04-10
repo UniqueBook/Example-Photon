@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Common;
+using UnityEngine.SceneManagement;
 
 public class LoginPanel : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class LoginPanel : MonoBehaviour
         if (returnCode == ReturnCode.Success)
         {
             //成功则跳转到下一个场景
+            SceneManager.LoadScene("Game");
         }
         else
         {

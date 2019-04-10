@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using ExitGames.Client.Photon;
 using Common;
+using Common.Tools;
 
 public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
 {
 
     public static PhotonEngine Instance;
-    private static PhotonPeer peer;
 
     public static PhotonPeer Peer
     {
@@ -18,8 +18,16 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
         }
     }
 
+    private static PhotonPeer peer;
+
+    //用户名 （唯一值）
+    public static string username;
+
     //通过 operationCode  找到对应的 request
     private Dictionary<OperationCode, Request> RequestDict = new Dictionary<OperationCode, Request>();
+
+    //管理事件
+    private Dictionary<EventCode, BaseEvent> EventDict = new Dictionary<EventCode, BaseEvent>();
 
     private void Awake()
     {
@@ -71,27 +79,16 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
 
     }
 
-    //服务器端向客户端直接发起的请求、通知
+    //服务器端向客户端直接发起的请求、通知   (事件分发器)
     public void OnEvent(EventData eventData)
     {
-        switch (eventData.Code)
-        {
-            case 1:
-                Debug.Log("收到了服务器的事件推送!");
-                Dictionary<byte, object> data = eventData.Parameters;
-                object intValue; object stringValue;
-                data.TryGetValue(1, out intValue);
-                data.TryGetValue(2, out stringValue);
-                Debug.Log("收到服务器的事件推送的内容：" + intValue.ToString() + stringValue.ToString());
-                break;
-            default:
-                break;
-        }
-
+        EventCode code = (EventCode)eventData.Code;
+        BaseEvent baseEvent = DictTool.GetValue<EventCode, BaseEvent>(EventDict, code);
+        baseEvent.OnEvent(eventData);
     }
 
-    //服务器端响应客户端请求
-    public void OnOperationResponse(OperationResponse operationResponse) 
+    //服务器端响应客户端请求  (请求分发器)
+    public void OnOperationResponse(OperationResponse operationResponse)
     {
         OperationCode OperationCode = (OperationCode)operationResponse.OperationCode; //强转为 OperationCode
 
@@ -125,5 +122,17 @@ public class PhotonEngine : MonoBehaviour, IPhotonPeerListener
     public void RemoveRequest(Request request)
     {
         RequestDict.Remove(request.opCode);
+    }
+
+    //添加事件
+    public void AddEvent(BaseEvent baseEvent)
+    {
+        EventDict.Add(baseEvent.eventCode, baseEvent);
+    }
+
+    //移除事件
+    public void RemoveEvent(BaseEvent baseEvent)
+    {
+        EventDict.Remove(baseEvent.eventCode);
     }
 }

@@ -84,6 +84,8 @@
     <Compile Include="Handler\DefaultHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
+    <Compile Include="Handler\SyncPlayerHandler.cs" />
+    <Compile Include="Handler\SyncPositionHandler.cs" />
     <Compile Include="Manger\IUserManager.cs" />
     <Compile Include="Manger\UserManager.cs" />
     <Compile Include="Model\User.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="MyServer.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threads\SyncPositionThread.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

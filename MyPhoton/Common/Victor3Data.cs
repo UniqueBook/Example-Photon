@@ -12,8 +12,8 @@ namespace Common
     [Serializable]
     public class Victor3Data
     {
-        public float x;
-        public float y;
-        public float z;
+        public float X { get; set; }
+        public float Y { get; set; }
+        public float Z { get; set; }
     }
 }

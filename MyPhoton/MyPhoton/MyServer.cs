@@ -8,6 +8,7 @@ using System.IO;
 using log4net.Config;
 using MyPhoton.Handler;
 using Common;
+using MyPhoton.Threads;
 
 namespace MyPhoton
 {
@@ -25,12 +26,20 @@ namespace MyPhoton
         //统一管理所有的 handler (客户端的请求)
         public Dictionary<OperationCode, BaseHandler> handlerDict = new Dictionary<OperationCode, BaseHandler>();
 
+        //保存所有客户端的peer，当有需要可以从集合中得到所欲用户的peer，发送数据
+        public List<MyClient> clientPeer = new List<MyClient>();
+
+        //创建线程
+        private SyncPositionThread syncPositionThread = new SyncPositionThread();
+
         //当一个客户端发起连接请求时
         //使用 peerBase 类型，表示和一个客户端连接
         protected override PeerBase CreatePeer(InitRequest initRequest)
         {
             log.Info("一个客户端连接过来了");
-            return new MyClient(initRequest);
+            MyClient peer = new MyClient(initRequest);
+            clientPeer.Add(peer);
+            return peer;
         }
 
         //服务器端应用启动时调用（初始化）
@@ -53,8 +62,10 @@ namespace MyPhoton
                 XmlConfigurator.ConfigureAndWatch(configFileInfo);//让log4net这个插件读取配置
             }
             log.Info("初始化完成！");
-
             InitHandler();
+
+            //启动线程
+            syncPositionThread.Run();
         }
 
         //初始化创建 loginHandler
@@ -66,12 +77,18 @@ namespace MyPhoton
             handlerDict.Add(defaultHandler.OpCode, defaultHandler);
             RegisterHandler registerHandler = new RegisterHandler();
             handlerDict.Add(registerHandler.OpCode, registerHandler);
+            SyncPositionHandler syncPositionHandler = new SyncPositionHandler();
+            handlerDict.Add(syncPositionHandler.OpCode, syncPositionHandler);
+            SyncPlayerHandler syncPlayerHandler = new SyncPlayerHandler();
+            handlerDict.Add(syncPlayerHandler.OpCode, syncPlayerHandler);
         }
 
         //server 端关闭的时候所做的一些处理
         protected override void TearDown()
         {
             log.Info("服务器关闭了！");
+            //关闭线程
+            syncPositionThread.Stop();
         }
     }
 }

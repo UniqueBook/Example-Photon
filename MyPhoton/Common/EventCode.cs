@@ -10,6 +10,7 @@ namespace Common
     /// </summary>
     public enum EventCode:byte
     {
-
+        NewPlayer,
+        SyncPosition
     }
 }
